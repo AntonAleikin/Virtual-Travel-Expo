@@ -1,0 +1,88 @@
+.home-section
+    +flex-center
+    padding-top: 12vh //100px
+    height: 100vh
+    width: 100%
+    background-color: $main_bg
+
+    &__promo
+        padding: 0 100px
+        height: 100%
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-start
+
+    &__header
+        margin: 0
+        margin-top: 4vh //106px
+        font-size: 7vh //50px
+        color: $logo_color
+
+    &__dates
+        margin-top: 2vh //34px
+        font-size: 3.5vh //35px
+        font-weight: 500
+        color: $white_color
+
+
+// Аккордеон
+.accordeon
+    margin-top: 5vh
+    height: 46vh
+    width: 100%
+
+    &__item
+        position: relative
+        height: 100%
+        
+        &-name
+            position: absolute
+            top: 0
+            left: 0
+            font-family: Roboto, sans-serif
+            font-weight: 300
+            +flex-center
+            padding: 0 10px
+            width: auto //80px
+            font-size: 3vh //30px
+            background-color: $logo_color
+            color: $white_color
+        &-img
+            height: inherit
+            box-shadow: 0 0 18px 4px black
+        &-descr
+            position: absolute
+            top: 50%
+            right: 6%
+            transform: translate(0, -50%)
+
+            font-family: Roboto, sans-serif
+            font-weight: 300
+            +flex-center
+            padding: 20px
+            height: auto//12vh
+            width: 40% 
+            font-size: 3vh 
+            background-color: $logo_color
+            color: $white_color 
+
+.section-link
+    margin-top: 5vh
+    +flex-center
+    width: 100%
+    &__link
+        width: inherit
+        +flex-center
+        color: $white_color
+        text-decoration: none
+        &:hover
+           color: $white_color
+           text-decoration: none 
+    &__text
+        font-size: 2.7vh
+    &__img
+        margin-left: 10px
+        height: 2.7vh
+        transform: translateY(10%)

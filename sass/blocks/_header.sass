@@ -1,0 +1,62 @@
+.header
+    +flex-center
+    height: 12vh
+    width: 100%
+    position: absolute
+    top: 0
+    z-index: 5
+    background-color: $main_bg
+
+    &_active
+        position: fixed
+        height: 100px
+
+.nav
+    +flex-between-center
+    padding: 0 100px
+    height: 100%
+    width: 100%
+
+    &__logo
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        height: 80%
+        
+        &-link
+            +flex-center
+            height: 100%
+            &:hover
+                text-decoration: none
+
+        &-img
+            height: inherit
+                
+
+    // Menu
+    &__links
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        height: 100%
+
+        &-logo
+            display: none
+
+        &-item
+            margin-right: 20px
+            font-size: 14px
+            line-height: 140%
+            font-weight: 700
+            text-decoration: none
+            color: #bfbfbf 
+            transition: color .3s linear
+            &:last-child
+                margin-right: 0
+                color: $logo_color
+            &:hover
+                text-decoration: none
+                color: $white_color  
+
+    &__hamburger
+        display: none   
