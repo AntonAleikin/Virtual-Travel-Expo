@@ -1,0 +1,56 @@
+.about-section
+    +flex-center
+    flex-direction: column
+    padding: 150px 100px
+    height: auto
+    width: 100%
+    background-color: red
+
+    &__item
+        display: grid
+        grid-template-columns: repeat(3, minmax(10px,1fr)) 2px repeat(3, minmax(10px,1fr))
+        grid-template-rows: repeat(1, 100%)
+        grid-gap: 0
+        align-items: center
+        height: 160px
+
+        &_right
+            .about-section__item
+                &-icon
+                    grid-column-start: 6
+                    grid-column-end: 7
+                &-text
+                    grid-column-start: 1
+                    grid-column-end: 4
+                    grid-row-start: 1
+                &-devider
+                    grid-column-start: 4
+                    grid-column-end: 5
+                    grid-row-start: 1
+
+        &-icon
+            grid-column-start: 2
+            grid-column-end: 3
+            align-self: center
+            justify-self: center
+            height: 90px //127px
+        &-img
+            height: 100%
+            font-size: 12vh
+
+        &-devider
+            grid-column-start: 4
+            grid-column-end: 5
+            height: 100%
+            width: 100%
+            background-color: $logo_color
+
+        &-text
+           grid-column-start: 5
+           grid-column-end: 8
+           padding: 0 10px
+           font-size: 20px
+           line-height: 33px
+           text-align: center
+           span
+               font-weight: 500
