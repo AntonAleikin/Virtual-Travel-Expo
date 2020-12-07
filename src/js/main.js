@@ -3,6 +3,7 @@ import headerShadow from './modules/header';
 import navMobile from './modules/nav-mobile';
 import sliders from './modules/sliders';
 import galerySlider from './modules/galery-slider';
+import sendForm from './modules/send-form';
 require('fslightbox');
 
 window.addEventListener("DOMContentLoaded", () =>
@@ -13,5 +14,6 @@ window.addEventListener("DOMContentLoaded", () =>
     headerShadow();
     navMobile();
     sliders('.accordeon__item','','','');
-    galerySlider();
+    //galerySlider();
+    sendForm();
 });

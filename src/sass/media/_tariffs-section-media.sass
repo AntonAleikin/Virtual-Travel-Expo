@@ -1,0 +1,67 @@
+// Large
+@media (max-width: 1199px)
+    .tariffs-section
+        padding: 110px 100px
+        &__header
+            font-size: 33px
+        &__table
+            margin-top: 30px
+
+
+// Medium - 720px
+@media (max-width: 991px)
+    .tariffs-section
+        padding: 100px 40px
+        &__item
+            &-header
+                font-size: 22px
+            &-descr
+                font-size: 18px
+            &-price
+                font-size: 22px
+            &-symbol
+                height: 22px
+
+
+// Small
+@media (max-width: 767px)
+    .tariffs-section
+        padding: 90px 40px
+        &__table
+            padding: 20px 10px 40px 10px
+            &-devider
+                right: 30%
+        &__item
+            grid-template-columns: 70% 30%
+            &-header
+                font-size: 20px
+            &-descr
+                font-size: 16px
+            &-price
+                font-size: 20px
+            &-symbol
+                height: 20px
+
+
+// Mobile
+@media (max-width: 575px)
+    .tariffs-section
+        padding: 80px 17px 40px 17px
+        &__header
+            font-size: 27px
+        &__table
+            margin-top: 0px
+            padding: 0 0 20px 0
+            box-shadow: none
+            &-devider
+                display: none
+        &__item
+            grid-template-columns: 68% 32%
+            &-header
+                font-size: 18px
+            &-descr
+                font-size: 14px
+            &-price
+                font-size: 18px
+            &-symbol
+                height: 18px

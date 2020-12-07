@@ -1,13 +1,29 @@
+// Large
+@media (max-width: 1199px)
+   .galery-section
+        &__header
+            font-size: 30px 
+
+// Medium 
+@media (max-width: 991px)
+    .galery-section
+        padding: 17vh 40px
+
 // Small
 @media (max-width: 767px)
     .galery-section
         padding: 17vh 40px
+        &__header
+            font-size: 30px
 
 // Mobile
 @media (max-width: 575px)
     .galery-section
-        height: auto
+        +flex-center
+        flex-direction: column
         padding: 17vh 17px
+        &__header
+            font-size: 27px
 
     .swiper-container
         height: 27vh

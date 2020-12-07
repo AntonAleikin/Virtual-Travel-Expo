@@ -1,0 +1,75 @@
+// Large
+@media (max-width: 1199px)
+    .contact-section
+        padding: 110px 100px 55px 100px
+        &__header
+            font-size: 33px
+        &__wrapper
+            margin-top: 50px
+        &__descr
+            width: 90%
+            font-size: 18px
+        &__contacts
+            margin-top: 50px
+            font-size: 18px
+.form
+    width: 90%
+    &__input
+        margin-top: 20px
+    &__button
+        margin-top: 20px
+
+
+// Medium - 720px
+@media (max-width: 991px)
+    .contact-section
+        padding: 100px 40px 50px 40px
+        &__wrapper
+            margin-top: 40px
+
+
+// Small
+@media (max-width: 767px)
+    .contact-section
+        padding: 90px 40px 45px 40px
+        &__wrapper
+            margin-top: 40px
+        &__descr
+            padding-left: 15px 
+            width: 100%
+            font-size: 14px
+            line-height: 28px
+        &__contacts
+            margin-top: 40px
+            font-size: 14px
+    .form
+        width: 100%
+        &__input
+            margin-top: 10px
+        &__button
+            margin-top: 10px
+
+
+// Mobile
+@media (max-width: 575px)
+    .contact-section
+        padding: 80px 17px 40px 17px
+        &__header
+            font-size: 27px
+        &__wrapper
+            +flex-center
+            flex-direction: column
+            margin-top: 30px
+        &__contacts
+            margin-top: 30px
+            flex-direction: column
+            &-item
+                margin-left: 0
+                margin-top: 10px
+    .form
+        margin-top: 10px
+        width: 100%
+        &__input
+            margin-top: 10px
+        &__button
+            margin-top: 10px

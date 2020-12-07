@@ -13,6 +13,6 @@ export default async function fetchservice(header, myBody) {
                 "Content-type": "application/json",
             },
             body: JSON.stringify(myBody),
-        });
+        }).then(respose => respose.json());
     }
 }

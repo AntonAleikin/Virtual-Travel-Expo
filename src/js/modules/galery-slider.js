@@ -92,7 +92,7 @@ const galerySlider = () =>
             setTimeout(() => 
             {
                 setWidth();
-            }, 70);
+            }, 250);
         }
     }
 
@@ -100,7 +100,6 @@ const galerySlider = () =>
     {
         window.addEventListener("scroll", defImgLoad);
     }); 
-    
     
     const mySwiper = new Swiper('.swiper-container', 
     {    

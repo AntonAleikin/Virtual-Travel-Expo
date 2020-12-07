@@ -1,10 +1,20 @@
 .about-section
+    position: relative
     +flex-center
     flex-direction: column
     padding: 150px 100px
     height: auto
     width: 100%
-    background-color: red
+
+    &__devider
+        position: absolute
+        top: 150px
+        bottom: 150px
+        left: 50%
+        transform: translateX(-50%) 
+        width: 2px
+        height: auto
+        background-color: $logo_color
 
     &__item
         display: grid
@@ -12,7 +22,8 @@
         grid-template-rows: repeat(1, 100%)
         grid-gap: 0
         align-items: center
-        height: 160px
+        margin-top: 20px
+        height: auto //160px
 
         &_right
             .about-section__item
@@ -23,6 +34,8 @@
                     grid-column-start: 1
                     grid-column-end: 4
                     grid-row-start: 1
+                    padding-right: 15px
+                    padding-left: 0 
                 &-devider
                     grid-column-start: 4
                     grid-column-end: 5
@@ -33,23 +46,15 @@
             grid-column-end: 3
             align-self: center
             justify-self: center
-            height: 90px //127px
+            height: 80px //127px
         &-img
             height: 100%
-            font-size: 12vh
-
-        &-devider
-            grid-column-start: 4
-            grid-column-end: 5
-            height: 100%
-            width: 100%
-            background-color: $logo_color
 
         &-text
            grid-column-start: 5
            grid-column-end: 8
-           padding: 0 10px
-           font-size: 20px
+           padding-left: 15px
+           font-size: 18px
            line-height: 33px
            text-align: center
            span

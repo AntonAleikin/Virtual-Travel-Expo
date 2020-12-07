@@ -1,0 +1,50 @@
+.overlay
+    height: 100vh
+    width: 100%
+
+    position: fixed
+    z-index: 10
+    top: 0
+
+    background-color: rgba(225, 225, 225, 0.7)
+
+    &-content
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+
+        padding: 20px 
+        height: 250px 
+        width: 500px 
+        background-color: $white_color
+        border-radius: 3vh
+    
+    &-header
+        font-family: Montserrat, sans-serif
+        font-size: 22px 
+        font-weight: 700
+        text-align: center
+        color: $logo_color
+
+    &-text
+        margin-top: 20px 
+        font-size: 19px 
+        line-height: 27px
+        font-weight: 500
+    
+    &-button
+        margin-top: 40px 
+        height: 50px 
+        width: 170px 
+        font-family: Montserrat, sans-serif
+        font-size: 20px 
+        font-weight: 700
+        color: $white_color
+        border: none
+        border-radius: 2vh
+        background-color: $main_bg

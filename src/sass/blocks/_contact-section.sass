@@ -1,0 +1,88 @@
+.contact-section
+    padding: 150px 100px 75px 100px
+    height: auto
+    width: 100%
+    background-color: $main_bg
+
+    &__header
+        text-align: center
+        color: $logo_color
+        font-size: 40px
+
+    &__wrapper
+        display: grid
+        grid-template-columns: 50% 50%
+        grid-template-rows: repeat(1, 100%)
+        grid-gap: 0
+        align-items: center
+        margin-top: 60px
+
+    &__descr
+        grid-column-start: 2
+        grid-column-end: 3
+        grid-row-start: 1
+        grid-row-end: 2
+        align-self: self-start
+        justify-self: center
+
+        height: auto
+        width: 80%
+        font-size: 20px
+        line-height: 35px
+        font-weight: 400
+        color: $white_color
+
+    &__contacts
+        +flex-center
+        margin-top: 60px
+        height: auto
+        width: 100%
+        font-size: 20px
+        font-weight: 500
+        color: $white_color
+
+        &-item
+            margin-left: 30px
+            text-decoration: none
+            color: $white_color
+            &:hover
+                text-decoration: none
+                color: $white_color
+            &:first-child
+                margin-left: 0
+            
+
+
+.form
+    grid-column-start: 1
+    grid-column-end: 2
+    grid-row-start: 1
+    grid-row-end: 2
+    align-self: self-start
+    justify-self: center
+
+    +flex-center
+    flex-direction: column
+
+    height: auto
+    width: 80%
+
+    &__input
+        margin-top: 28px
+        padding: 10px 20px
+        height: 50px
+        width: 100%
+        border-style: none
+        border-radius: 10px 
+        &:first-child
+            margin-top: 0
+
+    &__button
+        margin-top: 28px
+        height: 50px
+        width: 100%
+        color: $white_color
+        font-weight: 500
+        border-style: none
+        border-radius: 10px
+        background-color: $logo_color

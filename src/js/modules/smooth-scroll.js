@@ -1,38 +1,43 @@
+import contactOverlay from './contact-overlay';
+
 const smoothScroll = () => 
 {
     function scroll (hash, speed)
     {
-        let 
-        windowTop = window.scrollY,
-        toBlock = document.querySelector(hash).getBoundingClientRect().top,
-        start = null;
-
-        requestAnimationFrame(step);
-
-        function step (time)
+        try
         {
-            if (start === null)
-            {
-                start = time;
-            }
-
             let 
-            progress = time - start,
-            // Узнаем, в какую сторону листать
-            r = (toBlock < 0 ? Math.max(windowTop - progress / speed, windowTop + toBlock) : 
-                Math.min(windowTop + progress / speed, windowTop + toBlock));
-
-            window.scrollTo(0, r);
-
-            if (r != windowTop + toBlock)
+            windowTop = window.scrollY,
+            toBlock = document.querySelector(hash).getBoundingClientRect().top,
+            start = null;
+    
+            const step = (time) =>
             {
-                requestAnimationFrame(step);
-            }
-            else
-            {
-                location.hash = hash;
-            }
+                if (start === null)
+                {
+                    start = time;
+                }
+    
+                let 
+                progress = time - start,
+                // Узнаем, в какую сторону листать
+                r = (toBlock < 0 ? Math.max(windowTop - progress / speed, windowTop + toBlock) : 
+                    Math.min(windowTop + progress / speed, windowTop + toBlock));
+    
+                window.scrollTo(0, r);
+    
+                if (r != windowTop + toBlock)
+                {
+                    requestAnimationFrame(step);
+                }
+                else
+                {
+                    location.hash = hash;
+                }
+            };
+            requestAnimationFrame(step);
         }
+        catch(error){}
     }
 
     if (window.matchMedia("(min-width: 768px)").matches)
@@ -41,24 +46,48 @@ const smoothScroll = () =>
     
         links.forEach(link =>
         {
-            link.addEventListener("click", function(e) 
+            if(link.dataset.modal == 'form')
+            {   
+                link.addEventListener("click", function(e) 
+                {
+                    e.preventDefault();
+                    
+                    if(window.scrollY >= 2760)
+                    {
+                        this.hash = 'contact';
+                        scroll(this.hash, 0.8);
+                    }
+                    else
+                    {
+                        contactOverlay(); 
+                    }
+                });
+            }
+            else
             {
-                e.preventDefault();
-    
-                scroll(this.hash, 0.8);
-            });
+                link.addEventListener("click", function(e) 
+                {
+                    e.preventDefault();
+        
+                    scroll(this.hash, 0.8);
+                });
+            }
         });
     }
 
-    if (window.matchMedia("(max-width: 575px)").matches)
+    if (window.matchMedia("(max-width: 767px)").matches)
     {
-        const link = document.querySelector('.section-link_mobile__link');
+        const 
+        sectionLink = document.querySelector('.section-link__link'),
+        contact = document.querySelector('[data-modal="form"]');
 
-        link.addEventListener("click", function (e) 
+        sectionLink.addEventListener("click", function(e) 
         {
             e.preventDefault();
             scroll(this.hash, 0.8);
         });
+
+        contact.href = '#contact';
     }
 };
 export default smoothScroll;

@@ -74,7 +74,7 @@ const sliders = (slides, direction, prev, next) =>
             changeSlides(1);
             items[slideIndex - 1].classList.add('animate__slideInRight'); 
         }  
-    }, 4000);
+    }, 3800);
 
 };
 export default sliders;

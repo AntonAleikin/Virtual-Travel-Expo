@@ -1,0 +1,56 @@
+.tariffs-section
+    padding: 150px 100px
+    height: auto
+    width: 100%
+
+    &__header
+        text-align: center
+        color: $logo_color
+        font-size: 40px
+
+    &__table
+        position: relative
+        margin-top: 50px
+        padding: 20px 20px 40px 20px
+        width: 100%
+        height: auto
+        //box-shadow: 0 0 20px 1px black
+
+        &-devider
+            position: absolute
+            top: 20px
+            bottom: 20px
+            right: 20% // right = ирине второй колонки
+            height: auto // Растянул между Топ и Боттом!
+            width: 2px
+            background-color: $logo_color
+
+    &__item
+        display: grid
+        grid-template-columns: 80% 20%
+        grid-template-rows: repeat(1, 100%)
+        grid-gap: 0
+        align-items: center
+        margin-top: 30px
+        padding-left: 10px
+        height: auto
+        border-bottom: 2px solid $logo_color 
+
+        &-header
+            grid-column-start: 1
+            grid-column-end: 2
+            align-self: self-end
+            justify-self: start
+            font-size: 24px
+            font-weight: 500
+        &-descr
+            margin-top: 10px
+            font-size: 20px
+            font-weight: 400
+        &-price
+            align-self: self-end
+            justify-self: center
+            font-size: 24px
+            font-weight: 500
+        &-symbol
+            height: 24px

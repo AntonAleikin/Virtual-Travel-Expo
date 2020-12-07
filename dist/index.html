@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual travel expo</title>
-    <link rel="stylesheet" href="assets/css/main.min.css?4">
+    <link rel="stylesheet" href="assets/css/main.min.css?1">
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 </head>
 <body class="body">
@@ -15,7 +15,7 @@
 
             <div class="nav__logo">
                 <a class="nav__logo-link" href="/">
-                    <img class="nav__logo-img" src="assets/img/logo.png" alt="Virtual travel exhibition logo">
+                    <img class="nav__logo-img" src="assets/img/logo.svg" alt="Virtual travel exhibition logo">
                 </a>
             </div>
             
@@ -24,7 +24,7 @@
             <div class="nav__links">
                 <div class="nav__links-logo">
                     <a class="nav__links-logo-link" href="/">
-                        <img class="nav__links-logo-img" src="assets/img/logo.png" alt="Virtual travel exhibition logo">
+                        <img class="nav__links-logo-img" src="assets/img/logo.svg" alt="Virtual travel exhibition logo">
                     </a>
                     <img class="nav__links-close" src="assets/img/icons/exit-icon.svg" alt="exit icon"></img>
                 </div>
@@ -32,7 +32,7 @@
                 <a class="nav__links-item" href="#about">About expo</a>
                 <a class="nav__links-item" href="#stands">Stands</a>
                 <a class="nav__links-item" href="#tariffs">Tariffs</a>
-                <a class="nav__links-item" href="#contact">Become an exhibitor</a>
+                <a data-modal="form" class="nav__links-item" href="#">Become an exhibitor</a>
             </div>
 
 
@@ -99,13 +99,13 @@
     <!-- About -->
     <section id="about" class="about-section">
 
+        <div class="about-section__devider"></div>
+
         <div class="about-section__item">
 
             <div class="about-section__item-icon">
                 <img src="assets/img/icons/plane.svg" alt="svg icon of the plane" class="about-section__item-img">
             </div>
-
-            <div class="about-section__item-devider"></div>
 
             <div class="about-section__item-text">
                 In 2020, COVID-19 pandemic has affected outbound tourism worldwide. However, 2021 is forecast to see a slight rebound* in international travel.
@@ -117,8 +117,6 @@
             <div class="about-section__item-icon">
                 <img src="assets/img/icons/calendar.svg" alt="svg icon of the plane" class="about-section__item-img">
             </div>
-
-            <div class="about-section__item-devider"></div>
 
             <div class="about-section__item-text">
                 With this in mind, we would like to invite you to take part in Ukraine’s first ever <span>Virtual Travel Expo</span>, which will be held on <span>17-19 February 2021</span>.
@@ -132,8 +130,6 @@
                 <img src="assets/img/icons/chart-up.svg" alt="svg icon of the plane" class="about-section__item-img">
             </div>
 
-            <div class="about-section__item-devider"></div>
-
             <div class="about-section__item-text">
                 A virtual expo is an efficient and cost-effective way to bring international tourism players together to discuss a road map to recovery, identify the trends and innovation shaping the future of the industry and reach out to potential buyers.
             </div>
@@ -144,8 +140,6 @@
             <div class="about-section__item-icon">
                 <img src="assets/img/icons/invite.svg" alt="svg icon of the plane" class="about-section__item-img">
             </div>
-
-            <div class="about-section__item-devider"></div>
 
             <div class="about-section__item-text">
                 About 2000 tour agents are expected to visit the event. The exhibitors will be represented by Ukraine‘s leading tour operators as well as international tourism destinations, hotels, and airlines.
@@ -159,8 +153,6 @@
                 <img src="assets/img/icons/save-money.svg" alt="svg icon of the plane" class="about-section__item-img">
             </div>
 
-            <div class="about-section__item-devider"></div>
-
             <div class="about-section__item-text">
                 In fact, the virtual exhibition is your familiar offline event, only you do not need to think about the physical stand, air tickets, accommodation, business cards, promotional material, etc. 
             </div>
@@ -171,8 +163,6 @@
             <div class="about-section__item-icon">
                 <img src="assets/img/icons/laptop-house.svg" alt="svg icon of the plane" class="about-section__item-img">
             </div>
-
-            <div class="about-section__item-devider"></div>
 
             <div class="about-section__item-text">
                 Ukraine Virtual Travel Expo 2021 will be based on a modern virtual event platform where exhibitors can create online events for immersive interaction with attendees.
@@ -251,16 +241,176 @@
     </section>
 
 
-    <!-- <script src="js/modules/sliders.js"></script>
-    <script src="js/modules/header.js"></script>
-    <script src="js/modules/smooth-scroll.js"></script>
-    <script src="js/modules/nav-mobile.js"></script> -->
+    <!-- Tariffs -->
+    <section id="tariffs" class="tariffs-section">
 
-    <!-- Слайдеры -->
-    <!-- <script src="js/services/fslightbox.js"></script>
-    <script src="js/services/swiper-bundle.min.js"></script>
-    <script src="js/modules/galery-slider.js"></script> -->
+        <h2 class="tariffs-section__header">Tariffs</h2>
+        
+        <div class="tariffs-section__table">
 
-    <script src="js/script.js"></script>
+            <div class="tariffs-section__table-devider"></div>
+
+            <div class="tariffs-section__item">
+
+                <div class="tariffs-section__item-header">Participation as exhibitor:
+                    <div class="tariffs-section__item-descr">
+                        booth, description of the company, links, photos and videos on the booth, presence in the list of exhibitors
+                    </div>
+                </div>
+
+                <div class="tariffs-section__item-price">
+                    <img src="assets/img/icons/euro.svg" alt="Euro sign" class="tariffs-section__item-symbol">
+                    2000
+                </div>
+            </div>
+
+            <div class="tariffs-section__item">
+
+                <div class="tariffs-section__item-header">Individual design of the booth</div>
+
+                <div class="tariffs-section__item-price">
+                    <img src="assets/img/icons/euro.svg" alt="Euro sign" class="tariffs-section__item-symbol">
+                    1000
+                </div>
+            </div>
+
+            <div class="tariffs-section__item">
+
+                <div class="tariffs-section__item-header">Mention in advertising campaign</div>
+
+                <div class="tariffs-section__item-price">
+                    <img src="assets/img/icons/euro.svg" alt="Euro sign" class="tariffs-section__item-symbol">
+                    300
+                </div>
+            </div>
+
+            <div class="tariffs-section__item">
+
+                <div class="tariffs-section__item-header">Logo on the big banner (right side) in the hall</div>
+
+                <div class="tariffs-section__item-price">
+                    <img src="assets/img/icons/euro.svg" alt="Euro sign" class="tariffs-section__item-symbol">
+                    500
+                </div>
+            </div>
+
+            <div class="tariffs-section__item">
+
+                <div class="tariffs-section__item-header">Logo on the small banner (left side) in the hall</div>
+
+                <div class="tariffs-section__item-price">
+                    <img src="assets/img/icons/euro.svg" alt="Euro sign" class="tariffs-section__item-symbol">
+                    250
+                </div>
+            </div>
+
+            <div class="tariffs-section__item">
+
+                <div class="tariffs-section__item-header">Banner (both sides) in the main lobby</div>
+
+                <div class="tariffs-section__item-price">
+                    <img src="assets/img/icons/euro.svg" alt="Euro sign" class="tariffs-section__item-symbol">
+                    700
+                </div>
+            </div>
+
+            <div class="tariffs-section__item">
+
+                <div class="tariffs-section__item-header">Webinar 30 min.</div>
+
+                <div class="tariffs-section__item-price">
+                    <img src="assets/img/icons/euro.svg" alt="Euro sign" class="tariffs-section__item-symbol">
+                    650
+                </div>
+            </div>
+            
+            <div class="tariffs-section__item">
+
+                <div class="tariffs-section__item-header">Webinar 60 min.</div>
+
+                <div class="tariffs-section__item-price">
+                    <img src="assets/img/icons/euro.svg" alt="Euro sign" class="tariffs-section__item-symbol">
+                    1100
+                </div>
+            </div>
+
+            <div class="tariffs-section__item">
+
+                <div class="tariffs-section__item-header">Webinar 2-5 hours (could be split)</div>
+
+                <div class="tariffs-section__item-price">
+                    <img src="assets/img/icons/euro.svg" alt="Euro sign" class="tariffs-section__item-symbol">
+                    2500
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+
+        <h2 class="contact-section__header">Become an Exhibitor</h2>
+
+        <div class="contact-section__wrapper">
+
+            <div class="contact-section__descr">
+                There are several formats and price options of participation available. Our managers will help you decide on the best participation format as well as deal with your personal account.
+            </div>
+
+            <form action="#" class="form">
+                <input required placeholder="Company name" name="companyName" type="text" maxlength="30" class="form__input">
+        
+                <input required placeholder="Contact person" name="contactPerson" type="text" maxlength="30" class="form__input">
+        
+                <input required placeholder="E-mail" name="email" type="email" class="form__input form__input-email">
+        
+                <input required placeholder="Mobile" name="Phone" type="text" maxlength="20" class="form__input">
+        
+                <button class="form__button">Submit</button>
+            </form>
+        </div>
+
+        <div class="contact-section__contacts">
+
+            <div class="contact-section__contacts-item">Contact us:</div>
+
+            <a href="tel:+38 066 716 92 25" class="contact-section__contacts-item">+38 066 716 92 25</a>
+
+            <a href="mailto:anna@add1.com.ua" class="contact-section__contacts-item">anna@add1.com.ua</a>
+
+            <div class="contact-section__contacts-item">Anna</div>
+        </div>
+    </section>
+
+    <!-- Overlay -->
+    <!-- <div class="contact-overlay">
+
+        <div class="contact-overlay__close">
+            <img src="assets/img/icons/exit-icon.svg" alt="exit icon" class="contact-overlay__close-img">
+        </div>
+
+        <div class="contact-overlay__content">
+
+            <div class="contact-overlay__header">Become an Exhibitor</div>
+            <div class="contact-overlay__text">
+                Please fill and submit your company information. We will contact you shortly to discuss your participation details.
+            </div>
+
+            <form action="#" class="form-overlay">
+                <input required placeholder="Company name" name="companyName" type="text" maxlength="30" class="form-overlay__input">
+        
+                <input required placeholder="Contact person" name="contactPerson" type="text" maxlength="30" class="form-overlay__input">
+        
+                <input required placeholder="E-mail" name="email" type="email" class="form-overlay__input">
+        
+                <input required placeholder="Mobile" name="Phone" type="text" maxlength="20" class="form-overlay__input">
+        
+                <button class="form-overlay__button">Submit</button>
+            </form>
+        </div>
+    </div> -->
+
+    <script src="js/script.js?12"></script>
 </body>
 </html>
