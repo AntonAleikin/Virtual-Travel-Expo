@@ -39,6 +39,7 @@ const contactOverlay = () =>
     `;
     document.documentElement.style.overflow = 'hidden';
     body.append(modal);
+    
 
     
     function close ()

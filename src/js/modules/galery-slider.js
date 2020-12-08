@@ -11,13 +11,6 @@ const galerySlider = () =>
     swiperSlideImg = document.querySelectorAll('.swiper-slide__img'),
     swiperButtons = document.querySelectorAll('.swiper-button');
 
-    if (window.matchMedia('(max-width: 790px)').matches)
-    {
-        swiperButtons.forEach(button =>
-        {
-            button.style.display = 'none';
-        });
-    }
 
     function removeBtn ()
     {
@@ -26,6 +19,7 @@ const galerySlider = () =>
             swiperButtons.forEach(button =>
             {
                 button.style.display = 'none';
+                document.documentElement.style.overflow = 'hidden';
             });
     
             setTimeout(() => 
@@ -38,6 +32,7 @@ const galerySlider = () =>
                 {
                     swiperButtons.forEach(button =>
                     {
+                        document.documentElement.style.overflow = 'auto';
                         button.style.display = 'block';
                     });
                 });
@@ -46,6 +41,7 @@ const galerySlider = () =>
                 {
                     swiperButtons.forEach(button =>
                     {
+                        document.documentElement.style.overflow = 'auto';
                         button.style.display = 'block';
                     });
                 });
@@ -54,53 +50,69 @@ const galerySlider = () =>
     }
 
 
+    // Убираем кнопки для тачскринов
+    if (window.matchMedia('(max-width: 790px)').matches)
+    {
+        swiperButtons.forEach(button =>
+        {
+            button.style.display = 'none';
+        });
+    }
+
+    // Убираем кнопки после клика на бока для десктопов
+    swiperSlides.forEach(slide =>
+    {
+        slide.addEventListener("click", () =>
+        {
+            removeBtn();
+        });
+    });
+
+    // Убираем кнопки после клика для десктопов
+    swiperSlideImg.forEach(img => 
+    {
+        img.addEventListener("click", () =>
+        {
+            removeBtn();
+        });
+    });
+    
+
     function setWidth ()
     {
         swiperWrapper.style.width = window.getComputedStyle(swiperSlideImg[0]).width;    
     }
 
-
     function defImgLoad ()
     {
-        if ((window.scrollY >= galerySection.getBoundingClientRect().top - 150 ||
-            galerySection.getBoundingClientRect().top == 0) &&
-            swiperSlideImg[0].src != location.origin + '/' + swiperSlideImg[0].dataset.src)
+        if (swiperSlideImg[0].getBoundingClientRect().top < (window.innerHeight + window.scrollY) &&
+            swiperSlideImg[0].classList.contains('lazy-load') && 
+            !galerySection.classList.contains('galery-section-bg'))
         {
             galerySection.classList.add('galery-section-bg');
 
             swiperSlideImg.forEach(img => 
             {
-                if (img.src != location.origin + '/' + img.dataset.src)
-                {
-                    img.src = location.origin + '/' + img.dataset.src;  
-                    
-                    img.addEventListener("click", () =>
-                    {
-                        removeBtn();
-                    });
-                }
-            });
-
-            swiperSlides.forEach(slide =>
-            {
-                slide.addEventListener("click", () =>
-                {
-                    removeBtn();
-                });
+                img.src = img.dataset.src;
+                img.classList.remove('lazy-load');
             });
 
             setTimeout(() => 
             {
                 setWidth();
-            }, 250);
+            }, 300);
+
+            window.removeEventListener("scroll", defImgLoad);
         }
     }
 
+    // Вызываем отложенную загрузку изображений
     window.addEventListener("DOMContentLoaded", () =>
     {
         window.addEventListener("scroll", defImgLoad);
     }); 
     
+
     const mySwiper = new Swiper('.swiper-container', 
     {    
         pagination: {
