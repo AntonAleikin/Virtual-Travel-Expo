@@ -1,4 +1,4 @@
-const sliders = (slides, direction, prev, next) =>
+const sliders = (slides, speed, prev, next) =>
 {
     const 
     items = document.querySelectorAll(slides); // Слайды из аргумента
@@ -74,7 +74,7 @@ const sliders = (slides, direction, prev, next) =>
             changeSlides(1);
             items[slideIndex - 1].classList.add('animate__slideInRight'); 
         }  
-    }, 3800);
+    }, speed);
 
 };
 export default sliders;

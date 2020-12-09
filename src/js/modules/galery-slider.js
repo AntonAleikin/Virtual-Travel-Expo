@@ -101,7 +101,7 @@ const galerySlider = () =>
             {
                 setWidth();
             }, 300);
-
+            
             window.removeEventListener("scroll", defImgLoad);
         }
     }
@@ -111,6 +111,17 @@ const galerySlider = () =>
     {
         window.addEventListener("scroll", defImgLoad);
     }); 
+
+
+    // Вызываем отложенную загрузку изображений для моб устройств
+    if (window.matchMedia("(max-width: 767px)").matches)
+    {
+        const galeryLink = document.querySelector('[href="#stands"]');
+        galeryLink.addEventListener("click", () =>
+        {
+            defImgLoad();
+        });
+    }
     
 
     const mySwiper = new Swiper('.swiper-container', 

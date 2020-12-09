@@ -17,16 +17,14 @@ class SendMail
             exit(json_encode(false));
         } 
     }
-    // "tmtexpoua@gmail.com" ychornei@globalmarketing.com.ua 
+    // info@vte2021.com
     public function sendMail($company, $name, $email, $number) 
     {
-        $to = "aleikinaa98@gmail.com, ";
-        $to .= "madevich.rpg@gmail.com, ";
-        $to .= "anton98ecwid@gmail.com";
+        $to = "aleikinaa98@gmail.com";
         
-        $subject = "TMTEXPO REGISTRATION";
+        $subject = "VTE 2021 REGISTRATION";
         
-        $headers = "From: TMTEXPO <info@simple-e-chat.ru.com>\r\n";
+        $headers = "From: VTE <info@simple-e-chat.ru.com>\r\n";
         $headers .= "MIME-Version: 1.0\r\n";
         $headers .= "Content-type: text/html; charset=utf-8\r\n";
         

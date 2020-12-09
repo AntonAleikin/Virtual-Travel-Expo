@@ -81,13 +81,13 @@ const smoothScroll = () =>
         sectionLink = document.querySelector('.section-link__link'),
         contact = document.querySelector('[data-modal="form"]');
 
+        contact.href = '#contact';
+
         sectionLink.addEventListener("click", function(e) 
         {
             e.preventDefault();
             scroll(this.hash, 0.8);
         });
-
-        contact.href = '#contact';
     }
 };
 export default smoothScroll;
