@@ -6,18 +6,6 @@ const videoPlayer = () =>
     tag.src = "https://www.youtube.com/iframe_api";
     const firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    
-    /* setTimeout(() =>
-    {
-        const player = new YT.Player('player', {
-            height: '100%',
-            width: '100%',
-            videoId: 'ZzoyPEzvtlc',
-            playerVars: {
-                'modestbranding': 1,
-            }
-        });
-    }, 350); */
 
     function defPlayerLoad()
     {
@@ -37,7 +25,6 @@ const videoPlayer = () =>
             videoPlayer.classList.remove('lazy-load');
 
             window.removeEventListener("scroll", defPlayerLoad);
-            console.log('aahj');
         }
     }
     window.addEventListener("scroll", defPlayerLoad);

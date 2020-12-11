@@ -11,7 +11,7 @@ export default function overlay () {
             <div class="overlay-header">Thank you for your interest!</div>
 
             <div class="overlay-text">
-                Our manager will contact you within 24 hours. 
+                Our manager will contact you shortly. 
                 Please check your email, including the spam box.
             </div>
 

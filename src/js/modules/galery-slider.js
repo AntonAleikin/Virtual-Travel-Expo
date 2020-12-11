@@ -95,12 +95,23 @@ const galerySlider = () =>
             {
                 img.src = img.dataset.src;
                 img.classList.remove('lazy-load');
+                img.addEventListener("load", () =>
+                {
+                    setWidth();
+                });
             });
 
-            setTimeout(() => 
-            {
-                setWidth();
-            }, 300);
+            const mySwiper = new Swiper('.swiper-container', 
+            {    
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
             
             window.removeEventListener("scroll", defImgLoad);
         }
@@ -122,18 +133,5 @@ const galerySlider = () =>
             defImgLoad();
         });
     }
-    
-
-    const mySwiper = new Swiper('.swiper-container', 
-    {    
-        pagination: {
-            el: '.swiper-pagination',
-        },
-
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
 };
 export default galerySlider();
