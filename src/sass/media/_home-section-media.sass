@@ -9,10 +9,18 @@
     .home-section
         &__promo
             padding: 0 40px
+    .accordeon
+        &__item
+            &-img
+                width: 40vw
 
 
 // Small
-//@media (max-width: 767px)
+@media (max-width: 767px)
+    .accordeon
+        &__item
+            &-img
+                width: 50vw
      
 
 
@@ -29,8 +37,9 @@
     
     .accordeon
         margin-top: 7vh
-        max-height: 27vh
         &__item
+            &-img
+                width: 90vw
             &-descr
                 right: 10%
                 padding: 10px

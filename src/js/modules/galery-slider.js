@@ -6,7 +6,6 @@ const galerySlider = () =>
 {
     const 
     galerySection = document.querySelector('.galery-section'),
-    swiperWrapper = document.querySelector('.swiper-wrapper'),
     swiperSlides = document.querySelectorAll('.swiper-slide'),
     swiperSlideImg = document.querySelectorAll('.swiper-slide__img'),
     swiperButtons = document.querySelectorAll('.swiper-button');
@@ -78,10 +77,6 @@ const galerySlider = () =>
     });
     
 
-    function setWidth ()
-    {
-        swiperWrapper.style.width = window.getComputedStyle(swiperSlideImg[0]).width;    
-    }
 
     function defImgLoad ()
     {
@@ -95,10 +90,6 @@ const galerySlider = () =>
             {
                 img.src = img.dataset.src;
                 img.classList.remove('lazy-load');
-                img.addEventListener("load", () =>
-                {
-                    setWidth();
-                });
             });
 
             const mySwiper = new Swiper('.swiper-container', 
@@ -124,7 +115,7 @@ const galerySlider = () =>
     }); 
 
 
-    // Вызываем отложенную загрузку изображений для моб устройств
+    // Вызываем отложенную загрузку изображений из перехода в меню для моб устройств
     if (window.matchMedia("(max-width: 767px)").matches)
     {
         const galeryLink = document.querySelector('[href="#stands"]');

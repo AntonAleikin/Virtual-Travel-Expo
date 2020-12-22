@@ -1,8 +1,15 @@
 // Large
 @media (max-width: 1199px)
-   .galery-section
+    .galery-section
         &__header
-            font-size: 30px 
+            font-size: 30px
+    .swiper-wrapper
+        width: 50vw
+    .swiper-slide
+        &__img
+            display: block
+            width: 50vw
+
 
 // Medium 
 @media (max-width: 991px)
@@ -15,6 +22,12 @@
         padding: 17vh 40px
         &__header
             font-size: 30px
+    .swiper-wrapper
+        width: 60vw
+    .swiper-slide
+        &__img
+            display: block
+            width: 60vw
 
 // Mobile
 @media (max-width: 575px)
@@ -25,7 +38,13 @@
         &__header
             font-size: 24px
         &__descr
-            padding: 0 12px
+            padding: 0 12px 
+        
 
-    .swiper-container
-        height: 27vh
+    .swiper-wrapper
+        width: 90vw
+
+    .swiper-slide
+        &__img
+            display: block
+            width: 90vw
